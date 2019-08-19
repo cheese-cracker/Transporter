@@ -15,10 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from main import views as vw
+from backend import views as vw
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('^/api/stops', vw.station_list),
-    path('^/api/stops/<?<stop_id>[0-9]+$', vw.station_detail)
+    path('api/stops', vw.station_list),
+    path('api/stops/<stop_id>', vw.station_detail)
 ]

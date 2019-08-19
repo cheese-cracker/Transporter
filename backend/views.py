@@ -7,11 +7,11 @@ from .models import BusStop
 from .serializers import BusStopSerializer
 
 
-PAGE_LINK = '/api/stops/page/'
+PAGE_LINK = 'page/'
 
 
 @api_view(['GET', 'POST'])
-def stations_list(req):
+def station_list(req):
     if req.method == 'GET':
         data = []
         nextPage = 1
@@ -41,6 +41,7 @@ def stations_list(req):
         })
 
     elif req.method == 'POST':
+        print(req.data)
         serializer = BusStopSerializer(data=req.data)
         if serializer.is_valid():
             serializer.save()
@@ -53,7 +54,7 @@ def stations_list(req):
 @api_view(['GET', 'PUT', 'DELETE'])
 def station_detail(req, stop_id):
     try:
-        stop = BusStop.objects.get(pk=stop_id)
+        stop = BusStop.objects.get(id=stop_id)
     except stop.DoesNotExist:
         return Response(status=status.HTTP_404_NOT_FOUND)
 
