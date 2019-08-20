@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {Bar} from 'react-chartjs-2';
 import { BrowserRouter, Route} from 'react-router-dom';
 import { Navbar, Nav } from 'react-bootstrap';
 import StopListings from './components/stopListing';
@@ -18,9 +19,27 @@ const BusListings = () => (
 );
 
 
-
 class App extends Component {
+
   render() {
+    const datas = {
+        labels: ["Stop1", "Stop2", "Stop3", "Stop4", "Stop5", "Stop6", "Stop7"],
+        datasets: [
+            {
+            label: "Entering Bus Stop",
+            backgroundColor: 'rgb(99, 225, 132)',
+            borderColor: 'rgb(99, 225, 132)',
+            data: [20, 10, 35, 2, 20, 10, 0],
+            },
+            {
+            label: "Exiting Bus Stop",
+            backgroundColor: 'rgb(255, 99, 132)',
+            borderColor: 'rgb(255, 99, 132)',
+            data: [1, 10, 18, 23, 10, 10, 55],
+            }
+        ]
+    };
+
     return (
 <div className="App">
     <Navbar bg="dark" variant="dark">
@@ -31,13 +50,22 @@ class App extends Component {
         </Nav>
         <Clock />
     </Navbar>
-
+    <div className="module-box">
+        <Bar
+          data={datas}
+          label="Human Chart"
+          width={100}
+          height={300}
+          options={{ maintainAspectRatio: false }}
+        />
+    </div>
     <div className="content">
      <BrowserRouter>
        <BusListings/>
      </BrowserRouter>
     </div>
-</div>
+
+    </div>
     );
   }
 }
