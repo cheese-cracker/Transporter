@@ -3,6 +3,7 @@ import StopConnect from './stopConnect';
 
 const bus_api = new StopConnect();
 
+
 export default class StopListings extends Component{
     state = {
         busstops: [],
@@ -29,6 +30,7 @@ export default class StopListings extends Component{
 
     nextPage = () => {
         bus_api.getStopsByLink(this.state.nextPageURL).then((res) =>{
+            console.log(res);
             this.setState({
                 busstops: res.data,
                 nextPageURL: res.nextlink
@@ -62,12 +64,13 @@ export default class StopListings extends Component{
                         <td>{c.entering}</td>
                         <td>{c.exiting}</td>
                         <td>
-                            <button  onClick={(e)=>  this.deleteHandler(e,c.id) }> Delete</button> <a  href={"/bus_stop/" + c.id}> Update</a>
+          <button className="btn btn-sm btn-danger"  onClick={(e)=>  this.deleteHandler(e,c.id) }> Delete</button> 
+          <button type="submit" className="btn btn-sm btn-success" onClick={"window.location.pathname = /bus_stop/" + c.id}>Update</button>
                         </td>
                     </tr>)}
                 </tbody>
             </table>
-            <button  className="btn btn-primary"  onClick=  {  this.nextPage  }>Next</button>
+            <button  className="btn btn-primary"  onClick={this.nextPage}>Next</button>
         </div>
         );
     }

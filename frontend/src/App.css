@@ -1,2 +1,190 @@
-.body{}
+body {
+  /* background-image: url('bg.jpg'); */
+  background-position: center;
+}
 
+.content{
+    margin-top:20px;
+    justify-content: space-between;
+}
+.modules-flex {
+  margin: 0 auto;
+  margin-top: 30px;
+  display: flex;
+  max-width: 1000px;
+  justify-content: space-between;
+  align-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.module-box {
+  padding: 35px;
+  background: rgba(30,30,30, 0.95);
+  border-radius: 8px;
+  min-height: 50px;
+  min-width: 32%;
+  margin-bottom: 14px;
+  color: #c7c7c7;
+
+}
+
+.mod-box {
+  padding: 4px;
+  background: rgba(60,60, 100, 0.95);
+  border-radius: 1px;
+  min-height: 8px;
+  min-width: 12%;
+  color: #0000dd;
+
+}
+
+.list-group {
+  margin: 15px 0 15px 0;
+}
+
+.list-group-item-dark {
+  background: rgba(30,30,30, 0);
+  color: #FFF;
+  border: 1px solid #c7c7c7;
+}
+
+.post-it {
+  width: 63%;
+}
+
+.weather {
+  width: 35%;
+}
+
+header {
+  font-family: 'Fjalla One', sans-serif;
+  padding: 5px;
+  text-transform: uppercase;
+}
+
+
+footer {
+  font-family: 'Fjalla One', sans-serif;
+  margin: 0 auto;
+  max-width: 800px;
+  font-size: 1.1em;
+  height: 110px;
+  text-align: center;
+} 
+
+footer a {
+  color: #FFF;
+} 
+
+footer a:hover {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+footer i {
+  margin-bottom: 10px;
+}
+
+
+h1 {
+  font-size: 4em;
+  font-weight: 700;
+  margin-bottom: 0px;
+}
+
+h2 {
+  font-family: 'Fjalla One', sans-serif;
+  margin: 7px 0 5px 0;
+  font-size: 2.2em;
+}
+
+h5 {
+  font-family: 'Fjalla One', sans-serif;
+  margin-top: 3px;
+  font-size: 1.2em;
+  font-weight: 100;
+}
+
+p {
+  margin: 10px 0 5px 0;
+  line-height: 1.4em;
+}
+
+.label {
+  font-size: 0.8em;
+  text-transform: uppercase;
+  color: #6cd6fe;
+}
+
+.bottomData {
+  font-size: 0.7em;
+}
+
+ul {
+  -webkit-margin-before: 0em;
+  -webkit-padding-start: 0px;
+}
+
+.white {
+  color: #FFF;
+}
+
+.orange {
+  color: #b5703c;
+}
+
+.blue {
+  color: #6cd6fe;
+}
+
+.bold {
+  font-weight: 700;
+}
+.uppercase {
+  text-transform: uppercase;
+}
+
+.btn {
+  font-family: 'Fjalla One', sans-serif;  
+}
+
+.btn-default {
+  background-color: #d6d6d6;
+  color: #1e1e1e;
+  margin-top: 10px;
+}
+
+.font-fjalla {
+  font-family: 'Fjalla One', sans-serif;  
+}
+
+/* SPIN-KIT */
+.spinner {
+  width: 40px;
+  height: 40px;
+  margin: 100px auto;
+  background-color: #FFF;
+
+  border-radius: 100%;  
+  -webkit-animation: sk-scaleout 1.0s infinite ease-in-out;
+  animation: sk-scaleout 1.0s infinite ease-in-out;
+}
+
+@-webkit-keyframes sk-scaleout {
+  0% { -webkit-transform: scale(0) }
+  100% {
+    -webkit-transform: scale(1.0);
+    opacity: 0;
+  }
+}
+
+@keyframes sk-scaleout {
+  0% { 
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  } 100% {
+    -webkit-transform: scale(1.0);
+    transform: scale(1.0);
+    opacity: 0;
+  }
+}

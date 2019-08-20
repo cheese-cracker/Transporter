@@ -2,3 +2,8 @@
 Transporter/keyconfig.py
 graphscr.py
 __pycache__
+backend/pop.py
+*.pyc
+*.old
+*.sqlite3
+*.sql

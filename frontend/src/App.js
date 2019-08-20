@@ -1,40 +1,43 @@
 import React, {Component} from 'react';
 import { BrowserRouter, Route} from 'react-router-dom';
-import StopListings from './stopListing';
-import StopUpdater from './stopUpdater';
+import { Navbar, Nav } from 'react-bootstrap';
+import StopListings from './components/stopListing';
+import StopUpdater from './components/stopUpdater';
 // import for update and post
 import './App.css';
+import Clock from './components/Clock';
+// import Postit from './components/Postit';
 
 
-const BaseLayout = () => (
-  <div className="container-fluid">
-<nav className="navbar navbar-expand-lg navbar-light bg-light">
-  <h2>Bus Stop Information Dashboard</h2>
-  <div className="" id="navbarNavAltMarkup">
-    <div className="navbar-nav">
-        <h4><a className="nav-item nav-link" href="/">Bus Stop List</a></h4>
-        <h4><a className="nav-item nav-link" href="/bus_stop/">Change Bus Stops</a></h4>
-    </div>
-  </div>
-</nav>  
-
-    <div className="content">
+const BusListings = () => (
+    <div className="module-box">
       <Route path="/" exact component={StopListings} />
       <Route path="/bus_stop/:pk"  component={StopUpdater} />
       <Route path="/bus_stop/" exact component={StopUpdater} />
-
     </div>
-
-  </div>
 );
+
 
 
 class App extends Component {
   render() {
     return (
-      <BrowserRouter>
-        <BaseLayout/>
-      </BrowserRouter>
+<div className="App">
+    <Navbar bg="dark" variant="dark">
+        <Navbar.Brand href="#home"><h3>Bus Routes Management Dashboard</h3></Navbar.Brand>
+        <Nav className="mr-auto">
+          <Nav.Link href="/">Bus Stop List</Nav.Link>
+          <Nav.Link href="/bus_stop/">Add Bus Stop</Nav.Link>
+        </Nav>
+        <Clock />
+    </Navbar>
+
+    <div className="content">
+     <BrowserRouter>
+       <BusListings/>
+     </BrowserRouter>
+    </div>
+</div>
     );
   }
 }
