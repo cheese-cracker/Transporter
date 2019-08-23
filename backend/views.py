@@ -51,6 +51,13 @@ def station_list(req):
                         status=status.HTTP_400_BAD_REQUEST)
 
 
+@api_view(['GET'])
+def stations_all(req):
+    stops = BusStop.objects.all()
+    serializer = BusStopSerializer(stops, context={'req': req}, many=True)
+    return Response(serializer.data)
+
+
 @api_view(['GET', 'PUT', 'DELETE'])
 def station_detail(req, stop_id):
     try:
@@ -62,6 +69,8 @@ def station_detail(req, stop_id):
         serializer = BusStopSerializer(stop,
                                        data=req.data,
                                        context={'req': req})
+        return Response(serializer.data,
+                        status=status.HTTP_200_OK)
     elif req.method == 'PUT':
         serializer = BusStopSerializer(stop,
                                        data=req.data,

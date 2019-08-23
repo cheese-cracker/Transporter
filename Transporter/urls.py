@@ -20,5 +20,6 @@ from backend import views as vw
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/stops', vw.station_list),
-    path('api/stops/<stop_id>', vw.station_detail)
+    path('api/stops/<stop_id>', vw.station_detail),
+    path('api/stops_all', vw.stations_all),
 ]
