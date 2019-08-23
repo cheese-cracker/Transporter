@@ -27,7 +27,7 @@ export default class BarGaph extends Component{
     }
 
     componentDidMount() {
-        bus_api.getStops().then((res) => {
+        bus_api.getAllStops().then((res) => {
             return res.data;
             }).then((dats) => {
                 splitter(dats, (labs, enter, exit) => {

@@ -6,8 +6,10 @@ from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from .models import BusStop
 from .serializers import BusStopSerializer
 
+import csv
 
 PAGE_LINK = 'page/'
+ROUTES_CSV = 'utils/route_list.csv'
 
 
 @api_view(['GET', 'POST'])
@@ -31,14 +33,14 @@ def station_list(req):
             nextPage = data.next_page_number()
         if data.has_previous():
             previousPage = data.previous_page_number()
-
+        print(serializer.data)
         return Response({
             'data': serializer.data,
             'count': paginator.count,
             'numpages': paginator.num_pages,
             'nextlink': PAGE_LINK + str(nextPage),
             'previouslink': PAGE_LINK + str(previousPage),
-        })
+        }, status=status.HTTP_200_OK)
 
     elif req.method == 'POST':
         print(req.data)
@@ -84,3 +86,16 @@ def station_detail(req, stop_id):
     elif req.method == 'DELETE':
         stop.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
+
+
+@api_view(['GET'])
+def routes_detail(req):
+    routelist = []
+    with open(ROUTES_CSV, 'r') as f:
+        cvr = csv.reader(f)
+        for row in cvr:
+            routelist.append([(row[i], row[i+1]) for i in range(len(row)-1)])
+    print(routelist)
+    return Response({
+        'data': routelist,
+    }, status=status.HTTP_200_OK)

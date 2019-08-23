@@ -6,16 +6,20 @@ import StopUpdater from './components/stopUpdater';
 // import for update and post
 import './App.css';
 import Clock from './components/Clock';
-import BarGraph from './components/barGraph'
+import BarGraph from './components/barGraph';
+import LeafMap from './components/leafletMap';
+import RouteGraph from './components/routeGraph';
 // import Postit from './components/Postit';
 
 
 const BusListings = () => (
-    <div className="module-box">
+    <div className="module-bx">
       <Route path="/" exact component={StopListings} />
       <Route path="/bus_stop/:pk"  component={StopUpdater} />
       <Route path="/bus_stop/" exact component={StopUpdater} />
       <Route path="/station_population" exact component={BarGraph} />
+      <Route path="/map" exact component={LeafMap} />
+      <Route path="/routegraph" exact component={RouteGraph} />
     </div>
 );
 
@@ -31,6 +35,8 @@ class App extends Component {
           <Nav.Link href="/">Bus Stop List</Nav.Link>
           <Nav.Link href="/bus_stop/">Add Bus Stop</Nav.Link>
           <Nav.Link href="/station_population/">Bus Stop Population Graph</Nav.Link>
+          <Nav.Link href="/map">Bus Stops Map</Nav.Link>
+          <Nav.Link href="/routegraph">Route Network</Nav.Link>
         </Nav>
         <Clock />
     </Navbar>

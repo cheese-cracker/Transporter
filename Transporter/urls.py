@@ -22,4 +22,5 @@ urlpatterns = [
     path('api/stops', vw.station_list),
     path('api/stops/<stop_id>', vw.station_detail),
     path('api/stops_all', vw.stations_all),
+    path('routes_all', vw.routes_detail),
 ]

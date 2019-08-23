@@ -1,0 +1,11 @@
+.FullMap{
+height: 400px;
+width: 800px;
+align-items: center;
+}
+
+.leafMap{
+height: 95%;
+width: 95%;
+align-items: center;
+}
