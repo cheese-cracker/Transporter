@@ -22,6 +22,7 @@ class StopUpdater extends Component {
     handleCreate = () => {
         bus_api.createStop(
           {
+            "stop_id": this.refs.stop_id.value,
             "lat": this.refs.lat.value,
             "lon": this.refs.lon.value,
             "name": this.refs.name.value,
@@ -38,6 +39,7 @@ class StopUpdater extends Component {
         bus_api.updateStop(
           {
             "id": id,
+            "stop_id": this.refs.stop_id.value,
             "lat": this.refs.lat.value,
             "lon": this.refs.lon.value,
             "name": this.refs.name.value,
@@ -67,6 +69,10 @@ class StopUpdater extends Component {
         return (
           <form onSubmit={this.handleSubmit}>
           <div className="form-group">
+            <label>
+                StopID: </label>
+              <input className="form-control" type="text" ref='stop_id' />
+
             <label>
                 Latitude: </label>
               <input className="form-control" type="text" ref='lat' />

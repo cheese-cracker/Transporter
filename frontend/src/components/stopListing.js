@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+// import {Redirect} from 'react-router-dom';
 import StopConnect from './stopConnect';
 
 const bus_api = new StopConnect();
@@ -29,8 +30,9 @@ export default class StopListings extends Component{
     }
 
     nextPage = () => {
+        var prevLink = this.state.nextPageURL;
         bus_api.getStopsByLink(this.state.nextPageURL).then((res) =>{
-            console.log(res);
+            console.log(res.data);
             this.setState({
                 busstops: res.data,
                 nextPageURL: res.nextlink
@@ -57,7 +59,7 @@ export default class StopListings extends Component{
                 <tbody>
                     {this.state.busstops.map( c  =>
                     <tr  key={c.id}>
-                        <td>{c.id}</td>
+                        <td>{c.stop_id}</td>
                         <td>{c.lat}</td>
                         <td>{c.lon}</td>
                         <td>{c.name}</td>

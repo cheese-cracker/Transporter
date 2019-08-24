@@ -30,6 +30,7 @@ export default class BarGaph extends Component{
         bus_api.getAllStops().then((res) => {
             return res.data;
             }).then((dats) => {
+                console.log(dats)
                 splitter(dats, (labs, enter, exit) => {
                 this.setState({
                     labs: labs,

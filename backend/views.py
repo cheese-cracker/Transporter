@@ -1,11 +1,13 @@
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
 from rest_framework import status
-
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+
 from .models import BusStop
 from .serializers import BusStopSerializer
+from utils.pathfinder import get_route
 
+import json
 import csv
 
 PAGE_LINK = 'page/'
@@ -57,7 +59,9 @@ def station_list(req):
 def stations_all(req):
     stops = BusStop.objects.all()
     serializer = BusStopSerializer(stops, context={'req': req}, many=True)
-    return Response(serializer.data)
+    return Response({
+        'data': serializer.data
+    }, status=status.HTTP_200_OK)
 
 
 @api_view(['GET', 'PUT', 'DELETE'])
@@ -98,4 +102,32 @@ def routes_detail(req):
     print(routelist)
     return Response({
         'data': routelist,
+    }, status=status.HTTP_200_OK)
+
+
+@api_view(['POST'])
+def route_recv(req):
+    take_routes = req.data
+    print(take_routes)
+    with open(ROUTES_CSV, 'w') as f:
+        writ = csv.writer(f)
+        for lit in take_routes:
+            writ.writerow(lit)
+        # f.write(json.dumps(take_routes))
+
+
+@api_view(['POST'])
+def route_give(req):
+    start = int(req.data['start_id'])
+    end = int(req.data['end_id'])
+    line_nos, stopset = get_route(start, end)
+    stoplist = {}
+    for i, stop in enumerate(stopset):
+        stoplist[int(i)] = stop
+        # stoplist[i] = [BusStopSerializer(BusStop.objects.get(id=stop)) for stop in stopset[i]]
+    print(stoplist)
+    # thing = json.dumps(stoplist)
+    return Response({
+        'route_nos': line_nos,
+        'stops': stoplist,
     }, status=status.HTTP_200_OK)

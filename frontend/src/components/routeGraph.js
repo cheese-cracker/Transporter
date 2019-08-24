@@ -26,14 +26,14 @@ export default class RouteGraph extends Component{
             element: '#jsnx-graph',
             withLabels: true,
             nodeAttr: {
-                r: 10,
+                r: 15,
                 // function(d) {
                 // `d` has the properties `node`, `data` and `G`
                 // return d.data.count;
               // }
             },
             nodeStyle: {
-                fill : '#f00',
+                fill : '#f44',
             }
         });
     })

@@ -1,7 +1,10 @@
 import axios from 'axios';
 
-const API_URL = 'http://172.17.68.135:8000/api/stops';
-const ROUTES_URL = 'http://172.17.68.135:8000/routes_all';
+
+// const API_URL =    'http://localhost:8000/api/stops';
+// const ROUTES_URL = 'http://localhost:8000/routes_all';
+const API_URL = 'http://192.168.43.155:8000/api/stops';
+const ROUTES_URL = 'http://192.168.43.155:8000/routes_all';
 
 
 export default class StopConnect{
