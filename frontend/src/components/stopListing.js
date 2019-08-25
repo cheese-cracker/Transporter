@@ -43,6 +43,7 @@ export default class StopListings extends Component{
 
     render() {
         return (
+    <div  className="module-box">
         <div  className="bus-stop-listing">
             <table  className="table">
                 <thead  key="thead">
@@ -74,6 +75,7 @@ export default class StopListings extends Component{
             </table>
             <button  className="btn btn-primary"  onClick={this.nextPage}>Next</button>
         </div>
+    </div>
         );
     }
 };

@@ -24,4 +24,7 @@ urlpatterns = [
     path('api/stops_all', vw.stations_all),
     path('routes_all', vw.routes_detail),
     path('route_give', vw.route_give),
+    path('', vw.LoadView),
+    path('postMode', vw.postMode),
+    path('getStats', vw.getStats),
 ]

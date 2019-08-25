@@ -1,0 +1,32 @@
+<div class="container">
+        <!-- row -->
+        <div class="row tm-content-row">
+
+          <div class="col-12 tm-block-col">
+              <div class="tm-bg-primary-dark tm-block tm-block-taller tm-block-scroll">
+                  <h2 class="tm-block-title">Stat Table</h2>
+                  <table class="table">
+                      <thead>
+                          <tr>
+                              <th scope="col">Route Taken</th>
+                              <th scope="col">People Affected</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                      {% if affected %}
+                      {% for aff in affected %}
+                         <tr>
+                      {% for cord in aff %}
+                              <td>{{ cord }}
+                      {% endfor %}
+                         </tr>
+                      {% endfor %}
+                      {% endif %}
+                      </tbody>
+                  </table>
+              </div>
+          </div>
+
+
+      </div>
+    </div>

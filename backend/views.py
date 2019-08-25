@@ -2,10 +2,14 @@ from rest_framework.response import Response
 from rest_framework.decorators import api_view
 from rest_framework import status
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+from django.shortcuts import render, redirect
+from django.http import HttpResponse
+from django.views.decorators.csrf import csrf_exempt
 
 from .models import BusStop
 from .serializers import BusStopSerializer
 from utils.pathfinder import get_route
+from webtools import get_G, get_Gstats
 
 import json
 import csv
@@ -131,3 +135,59 @@ def route_give(req):
         'route_nos': line_nos,
         'stops': stoplist,
     }, status=status.HTTP_200_OK)
+
+
+# def HomeView(req):
+#     return render(req, 'backend/index.html', {
+#                   'title': 'EMRLite System',
+#     })
+
+
+def LoadView(req):
+    thid = get_G('original_route.png')
+    print(thid)
+    return render(req, 'backend/index.html', {
+                  'picture': 'original_route.png',
+    })
+
+
+def FullView(req):
+    thid = get_all_G(['original_route.png', 'people_route', 'optimal_route'])
+    print(thid)
+    return render(req, 'backend/index.html', {
+                  'picture': 'original_route.png',
+    })
+
+
+@csrf_exempt
+def postMode(req):
+    if req.method == 'POST':
+        data = req.POST.copy()
+        print(data)
+        # res = render(req, 'backend/index.html', {})
+        res = redirect('/getStats')
+        # res =  HttpResponse('<h2> Posted</h2>')
+        mod = data['browser'].lower()
+        print(mod)
+        # if 'mode' not in req.COOKIES:
+        res.set_cookie('mode', mod)
+        # res =  HttpResponse('<h2> Posted</h2>')
+        return res
+
+
+def getStats(req):
+    try:
+        mode = req.COOKIES['mode']
+    except Exception:
+        mode = 'original'
+    cp, cn, affected, benefited, inconvinience = get_Gstats(mode)
+    print(inconvinience)
+    return render(req, 'backend/tabulate.html', {
+            'cp': cp,
+            'cn': cn,
+            'affected': affected,
+            'benifited': benefited,
+            'inc': inconvinience
+    })
+
+

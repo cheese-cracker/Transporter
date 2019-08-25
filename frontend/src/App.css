@@ -19,7 +19,7 @@ body {
 
 .module-box {
   padding: 35px;
-  background: rgba(230,230,230, 0.95);
+  background: rgba(0, 0, 0, 0.95);
   border-radius: 8px;
   min-height: 50px;
   min-width: 32%;

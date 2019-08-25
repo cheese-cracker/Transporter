@@ -1,0 +1,1153 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>The Transporters</title>
+    <link rel="stylesheet" href="{% static 'fontawesome-5.5/css/all.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'slick/slick.css' %}">
+    <link rel="stylesheet" href="{% static 'slick/slick-theme.css' %}">
+    <link rel="stylesheet" href="{% static 'magnific-popup/magnific-popup.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/templatemo-style.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/login.css' %}" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{% static 'css/form1_style.css' %}" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+
+
+  </head>
+  <body>    
+    <!-- Hero section -->
+    <section id="hero" class="text-white tm-font-big tm-parallax">
+      <!-- Navigation -->
+      <nav class="navbar navbar-expand-md tm-navbar" id="tmNav">              
+        <div class="container">   
+          <div class="tm-next">
+              <a href="#hero" class="navbar-brand">The Transporters</a>
+          </div>             
+            
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-bars navbar-toggler-icon"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                  <a class="nav-link tm-nav-link" href="#introduction">Introduction</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link tm-nav-link" href="#work">Our Work</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link tm-nav-link" href="#login">Login</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link tm-nav-link" href="#contact">Contact Us</a>
+              </li>                    
+            </ul>
+          </div>        
+        </div>
+      </nav>
+      
+      <div class="text-center tm-hero-text-container">
+        <div class="tm-hero-text-container-inner">
+            <h2 class="tm-hero-title">Intelligent Transportation System</h2>
+            <p class="tm-hero-subtitle">
+              NEC
+              <br />by The Transporters
+            </p>
+        </div>        
+      </div>
+
+      <div class="tm-next tm-intro-next">
+        <a href="#introduction" class="text-center tm-down-arrow-link">
+          <i class="fas fa-3x fa-caret-down tm-down-arrow"></i>
+        </a>
+      </div>      
+    </section>
+
+    <section id="introduction" class="tm-section-pad-top">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <img src="{% static 'img/trimet.jpg' %}" alt="Image" class="img-fluid tm-intro-img" />
+          </div>
+          <div class="col-lg-6">
+            <div class="tm-intro-text-container">
+                <h2 class="tm-text-primary mb-4 tm-section-title">Introduction</h2>
+                <p class="mb-4 tm-intro-text">
+                  In <strong>Smart Transport System</strong> we aim is to create dynamic bus routing system which self optimizes to get the best routes using Genetic Algorithms based on Demand, people travelling, distance, connectivity metrics.
+
+
+              </p>
+                <p class="mb-5 tm-intro-text">
+                  Please tell your friends about our site 
+                  <a rel="nofollow" href="https://nec.in">NEC</a>. Thank you.
+                  Our APP give Users all features with Best bus routes, timings, information, ticket booking all  at one place accessible on a tap</p>
+                <div class="tm-next">
+                  <a href="#work" class="tm-intro-text tm-btn-primary">Read More</a>
+                </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row tm-section-pad-top">
+          <div class="col-lg-4">
+            <i class="fas fa-4x fa-bus text-center tm-icon"></i>
+            <h4 class="text-center tm-text-primary mb-4">Dynamic Routing</h4>
+            <p>
+By dynamically creating bus routes based on demand, the app makes travelling more efficient and simple for majority of the people and helps reduce the ‘last mile’ problem for majority of commuters.
+              </p>
+          </div>
+        
+        <div class="col-lg-4 mt-5 mt-lg-0">
+          <i class="fas fa-4x fa-bicycle text-center tm-icon"></i>
+          <h4 class="text-center tm-text-primary mb-4">Smart Multi-Purpose app</h4>
+          <p>
+An easy app could also make it possible for travelers to become aware of the various alternate options for going to the destination. 
+            </p>
+        </div>
+        <div class="col-lg-4 mt-5 mt-lg-0">
+          <i class="fas fa-4x fa-city text-center tm-icon"></i>
+          <h4 class="text-center tm-text-primary mb-4">Smart Pay System</h4>
+          <p>
+Also alongwith these, we created admin dashboard for managing routes. Other than that, we also aim to integerate smart pay system using QR code.
+            </p>
+        </div></div>
+      </div>
+    </section>
+<!--        Our work section starts here-->
+    <section id="work" class="tm-section-pad-top">
+      <div class="container tm-container-gallery">
+        <div class="row">
+          <div class="text-center col-12">
+              <h2 class="tm-text-primary tm-section-title mb-4">Our Work</h2>
+              <p class="mx-auto tm-work-description">
+                "Transform travelling with Intelligent Transport Management <br>Making Transportation more simple, secure, and faster than ever - with NEC"
+              </p>
+          </div>            
+        </div>
+          <div class="row">
+              <div class="bs-example" >
+    <div id="myCarousel" class="carousel slide">
+        <!-- Carousel indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+            <li data-target="#myCarousel" data-slide-to="3"></li>
+<!--
+            <li data-target="#myCarousel" data-slide-to="4"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+-->
+
+        </ol>
+        <!-- Wrapper for carousel items -->
+        <div class="carousel-inner" >
+            <div class="carousel-item active">
+                <img src="{% static 'img/original_route.png' %}" alt="First Slide" height="350px" width="600px"><br><br>
+<!--                    Code Starts here for container-->
+                    <div class="f_container">
+                      <h2>Original</h2>
+                      <p>The viewport showing the graphs of Original solution as made by our model</p>
+                      <form class="form-inline" action="/postMode" method='POST'>
+                          {% csrf_token %}
+                        <div class="form-group">
+                          <label  for="cord1">Cordinate 1: </label>
+                          <input class="form-control m-2" id="t1"  list="field1" name="browser">&emsp;                                <datalist id="field1">
+                                                                        <option value="1">
+                                    <option value="2">
+                                    <option value="3">
+                                    <option value="4">
+                                    <option value="5">
+                                    <option value="6">
+                                    <option value="7">
+                                    <option value="8">
+                                    <option value="9">
+                                    <option value="10">
+                                    <option value="11">
+                                    <option value="12">
+                                    <option value="13">
+                                    <option value="14">
+                                    <option value="15">
+                                    <option value="16">
+                                    <option value="17">
+                                    <option value="18">
+                                    <option value="19">
+                                    <option value="20">
+                                    <option value="21">
+                                    <option value="22">
+                                    <option value="23">
+                                    <option value="24">
+                                    <option value="25">
+                                    <option value="26">
+                                    <option value="27">
+                                    <option value="28">
+                                    <option value="29">
+                                    <option value="30">
+                                    <option value="31">
+                                    <option value="32">
+                                    <option value="33">
+                                    <option value="34">
+                                    <option value="35">
+                                    <option value="36">
+                                    <option value="37">
+                                    <option value="38">
+                                    <option value="39">
+                                    <option value="40">
+                                    <option value="41">
+                                    <option value="42">
+                                    <option value="43">
+                                    <option value="44">
+                                    <option value="45">
+                                    <option value="46">
+                                    <option value="47">
+                                    <option value="48">
+                                    <option value="49">
+                                    <option value="50">
+                                    <option value="61">
+                                    <option value="62">
+                                    <option value="63">
+                                    <option value="64">
+                                    <option value="65">
+                                    <option value="66">
+                                    <option value="67">
+                                    <option value="68">
+                                    <option value="69">
+                                    <option value="70">
+                                    <option value="71">
+                                    <option value="72>"
+                                    <option value="73">
+                                    <option value="74">
+                                </datalist>
+
+                        </div>
+                        <div class="form-group">
+                          <label  for="cord2">Cordinate 2: </label>
+                          <input class="form-control m-2" id="t2"  list="field2" name="browser">&emsp;                                <datalist id="field2">
+                                    <option value="1">
+                                    <option value="2">
+                                    <option value="3">
+                                    <option value="4">
+                                    <option value="5">
+                                    <option value="6">
+                                    <option value="7">
+                                    <option value="8">
+                                    <option value="9">
+                                    <option value="10">
+                                    <option value="11">
+                                    <option value="12">
+                                    <option value="13">
+                                    <option value="14">
+                                    <option value="15">
+                                    <option value="16">
+                                    <option value="17">
+                                    <option value="18">
+                                    <option value="19">
+                                    <option value="20">
+                                    <option value="21">
+                                    <option value="22">
+                                    <option value="23">
+                                    <option value="24">
+                                    <option value="25">
+                                    <option value="26">
+                                    <option value="27">
+                                    <option value="28">
+                                    <option value="29">
+                                    <option value="30">
+                                    <option value="31">
+                                    <option value="32">
+                                    <option value="33">
+                                    <option value="34">
+                                    <option value="35">
+                                    <option value="36">
+                                    <option value="37">
+                                    <option value="38">
+                                    <option value="39">
+                                    <option value="40">
+                                    <option value="41">
+                                    <option value="42">
+                                    <option value="43">
+                                    <option value="44">
+                                    <option value="45">
+                                    <option value="46">
+                                    <option value="47">
+                                    <option value="48">
+                                    <option value="49">
+                                    <option value="50">
+                                    <option value="61">
+                                    <option value="62">
+                                    <option value="63">
+                                    <option value="64">
+                                    <option value="65">
+                                    <option value="66">
+                                    <option value="67">
+                                    <option value="68">
+                                    <option value="69">
+                                    <option value="70">
+                                    <option value="71">
+                                    <option value="72>"
+                                    <option value="73">
+                                    <option value="74">
+
+                                </datalist>
+
+                        </div>    <div class="clearfix" ></div>
+
+                            <div class="form-group">
+                          <label for="cord3">Extra Input: </label><br><br>
+                          <input  class="form-control m-2" id="t3"  list="field3" name="browser">
+                                <datalist id="field3">
+                                    <option value="Original">
+                                    <option value="Optimal">
+                                    <option value="Money">
+                                    <option value="People">
+                                </datalist>
+                            </div>
+                    <br>
+                        <button type="submit"  class="button1 button2 m-2">Submit</button><br><br></div>
+ </form>
+<!--                    Code ends here for container-->
+            </div>
+            <div class="carousel-item">
+                <img src="{% static 'img/optimal_route.png' %}" alt="Second Slide" height="350px" width="600px"><br><br>
+<!--                    Code Starts here for container-->
+                    <div class="f_container">
+                      <h2>Optimal</h2>
+                      <p>The viewport showing the graphs of Optimal solution as made by our model</p>
+                      <form class="form-inline" action="/action_page.php">
+                        <div class="form-group">
+                          <label  for="cord1">Cordinate 1: </label>
+                          <input class="form-control m-2" id="t1"  list="field1" name="browser">&emsp;                                <datalist id="field1">
+                                    <option value="0">
+                                    <option value="1">
+                                    <option value="2">
+                                    <option value="3">
+                                    <option value="4">
+                                    <option value="5">
+                                    <option value="6">
+                                    <option value="7">
+                                    <option value="8">
+                                    <option value="9">
+                                    <option value="10">
+                                    <option value="11">
+                                    <option value="12">
+                                    <option value="13">
+                                    <option value="14">
+                                    <option value="15">
+                                    <option value="16">
+                                    <option value="17">
+                                    <option value="18">
+                                    <option value="19">
+                                    <option value="20">
+                                    <option value="21">
+                                    <option value="22">
+                                    <option value="23">
+                                    <option value="24">
+                                    <option value="25">
+                                    <option value="26">
+                                    <option value="27">
+                                    <option value="28">
+                                    <option value="29">
+                                    <option value="30">
+                                    <option value="31">
+                                    <option value="32">
+                                    <option value="33">
+                                    <option value="34">
+                                    <option value="35">
+                                    <option value="36">
+                                    <option value="37">
+                                    <option value="38">
+                                    <option value="39">
+                                    <option value="40">
+                                    <option value="41">
+                                    <option value="42">
+                                    <option value="43">
+                                    <option value="44">
+                                    <option value="45">
+                                    <option value="46">
+                                    <option value="47">
+                                    <option value="48">
+                                    <option value="49">
+                                    <option value="50">
+                                    <option value="61">
+                                    <option value="62">
+                                    <option value="63">
+                                    <option value="64">
+                                    <option value="65">
+                                    <option value="66">
+                                    <option value="67">
+                                    <option value="68">
+                                    <option value="69">
+                                    <option value="70">
+                                    <option value="71">
+                                    <option value="72>"
+                                    <option value="73">
+                                    <option value="74">
+                                </datalist>
+
+                        </div>
+                        <div class="form-group">
+                          <label  for="cord2">Cordinate 2: </label>
+                          <input class="form-control m-2" id="t2"  list="field2" name="browser">&emsp;                                <datalist id="field2">
+                                    <option value="1">
+                                    <option value="2">
+                                    <option value="3">
+                                    <option value="4">
+                                    <option value="5">
+                                    <option value="6">
+                                    <option value="7">
+                                    <option value="8">
+                                    <option value="9">
+                                    <option value="10">
+                                    <option value="11">
+                                    <option value="12">
+                                    <option value="13">
+                                    <option value="14">
+                                    <option value="15">
+                                    <option value="16">
+                                    <option value="17">
+                                    <option value="18">
+                                    <option value="19">
+                                    <option value="20">
+                                    <option value="21">
+                                    <option value="22">
+                                    <option value="23">
+                                    <option value="24">
+                                    <option value="25">
+                                    <option value="26">
+                                    <option value="27">
+                                    <option value="28">
+                                    <option value="29">
+                                    <option value="30">
+                                    <option value="31">
+                                    <option value="32">
+                                    <option value="33">
+                                    <option value="34">
+                                    <option value="35">
+                                    <option value="36">
+                                    <option value="37">
+                                    <option value="38">
+                                    <option value="39">
+                                    <option value="40">
+                                    <option value="41">
+                                    <option value="42">
+                                    <option value="43">
+                                    <option value="44">
+                                    <option value="45">
+                                    <option value="46">
+                                    <option value="47">
+                                    <option value="48">
+                                    <option value="49">
+                                    <option value="50">
+                                    <option value="61">
+                                    <option value="62">
+                                    <option value="63">
+                                    <option value="64">
+                                    <option value="65">
+                                    <option value="66">
+                                    <option value="67">
+                                    <option value="68">
+                                    <option value="69">
+                                    <option value="70">
+                                    <option value="71">
+                                    <option value="72>"
+                                    <option value="73">
+                                    <option value="74">
+
+                                </datalist>
+
+                        </div>    <div class="clearfix" ></div>
+
+                            <div class="form-group">
+                          <label for="cord3">Extra Input: </label><br><br>
+                          <input  class="form-control m-2" id="t3"  list="field3" name="browser">
+                                <datalist id="field3">
+                                    <option value="Original">
+                                    <option value="Optimal">
+                                    <option value="Money">
+                                    <option value="People">
+                                </datalist>
+                            </div>
+ </form>
+                    <br>
+                        <button type="submit" class="button1 button2 m-2">Submit</button><br><br></div>
+
+<!--                    Code ends here for container-->
+            </div>
+            <div class="carousel-item">
+                <img src="{% static 'img/people_route.png' %}" alt="Third Slide" height="350px" width="600px"><br><br>
+<!--                    Code Starts here for container-->
+                    <div class="f_container">
+                      <h2>People</h2>
+                      <p>The viewport showing the graphs of People solution as made by our model</p>
+                      <form class="form-inline" action="/action_page.php">
+                        <div class="form-group">
+                          <label  for="cord1">Cordinate 1: </label>
+                          <input class="form-control m-2" id="t1"  list="field1" name="browser">&emsp;                                <datalist id="field1">
+                                                                        <option value="1">
+                                    <option value="2">
+                                    <option value="3">
+                                    <option value="4">
+                                    <option value="5">
+                                    <option value="6">
+                                    <option value="7">
+                                    <option value="8">
+                                    <option value="9">
+                                    <option value="10">
+                                    <option value="11">
+                                    <option value="12">
+                                    <option value="13">
+                                    <option value="14">
+                                    <option value="15">
+                                    <option value="16">
+                                    <option value="17">
+                                    <option value="18">
+                                    <option value="19">
+                                    <option value="20">
+                                    <option value="21">
+                                    <option value="22">
+                                    <option value="23">
+                                    <option value="24">
+                                    <option value="25">
+                                    <option value="26">
+                                    <option value="27">
+                                    <option value="28">
+                                    <option value="29">
+                                    <option value="30">
+                                    <option value="31">
+                                    <option value="32">
+                                    <option value="33">
+                                    <option value="34">
+                                    <option value="35">
+                                    <option value="36">
+                                    <option value="37">
+                                    <option value="38">
+                                    <option value="39">
+                                    <option value="40">
+                                    <option value="41">
+                                    <option value="42">
+                                    <option value="43">
+                                    <option value="44">
+                                    <option value="45">
+                                    <option value="46">
+                                    <option value="47">
+                                    <option value="48">
+                                    <option value="49">
+                                    <option value="50">
+                                    <option value="61">
+                                    <option value="62">
+                                    <option value="63">
+                                    <option value="64">
+                                    <option value="65">
+                                    <option value="66">
+                                    <option value="67">
+                                    <option value="68">
+                                    <option value="69">
+                                    <option value="70">
+                                    <option value="71">
+                                    <option value="72>"
+                                    <option value="73">
+                                    <option value="74">
+                                </datalist>
+
+                        </div>
+                        <div class="form-group">
+                          <label  for="cord2">Cordinate 2: </label>
+                          <input class="form-control m-2" id="t2"  list="field2" name="browser">&emsp;                                <datalist id="field2">
+                                    <option value="1">
+                                    <option value="2">
+                                    <option value="3">
+                                    <option value="4">
+                                    <option value="5">
+                                    <option value="6">
+                                    <option value="7">
+                                    <option value="8">
+                                    <option value="9">
+                                    <option value="10">
+                                    <option value="11">
+                                    <option value="12">
+                                    <option value="13">
+                                    <option value="14">
+                                    <option value="15">
+                                    <option value="16">
+                                    <option value="17">
+                                    <option value="18">
+                                    <option value="19">
+                                    <option value="20">
+                                    <option value="21">
+                                    <option value="22">
+                                    <option value="23">
+                                    <option value="24">
+                                    <option value="25">
+                                    <option value="26">
+                                    <option value="27">
+                                    <option value="28">
+                                    <option value="29">
+                                    <option value="30">
+                                    <option value="31">
+                                    <option value="32">
+                                    <option value="33">
+                                    <option value="34">
+                                    <option value="35">
+                                    <option value="36">
+                                    <option value="37">
+                                    <option value="38">
+                                    <option value="39">
+                                    <option value="40">
+                                    <option value="41">
+                                    <option value="42">
+                                    <option value="43">
+                                    <option value="44">
+                                    <option value="45">
+                                    <option value="46">
+                                    <option value="47">
+                                    <option value="48">
+                                    <option value="49">
+                                    <option value="50">
+                                    <option value="61">
+                                    <option value="62">
+                                    <option value="63">
+                                    <option value="64">
+                                    <option value="65">
+                                    <option value="66">
+                                    <option value="67">
+                                    <option value="68">
+                                    <option value="69">
+                                    <option value="70">
+                                    <option value="71">
+                                    <option value="72>"
+                                    <option value="73">
+                                    <option value="74">
+
+                                </datalist>
+
+                        </div>    <div class="clearfix" ></div>
+
+                            <div class="form-group">
+                          <label for="cord3">Extra Input: </label><br><br>
+                          <input  class="form-control m-2" id="t3"  list="field3" name="browser">
+                                <datalist id="field3">
+                                    <option value="Original">
+                                    <option value="Optimal">
+                                    <option value="Money">
+                                    <option value="People">
+                                </datalist>
+                            </div>
+ </form>
+                    <br>
+                        <button type="submit" class="button1 button2 m-2">Submit</button><br><br></div>
+
+<!--                    Code ends here for container-->
+<!--                </div>-->
+            </div>
+            <div class="carousel-item">
+                <img src="{% static 'img/money_route.png' %}" alt="Fourth Slide" height="350px" width="600px"><br><br>
+<!--                    Code Starts here for container-->
+                    <div class="f_container">
+                      <h2>Money</h2>
+                      <p>The viewport showing the graphs of Money solution as made by our model</p>
+                      <form class="form-inline" action="/action_page.php">
+                        <div class="form-group">
+                          <label  for="cord1">Cordinate 1: </label>
+                          <input class="form-control m-2" id="t1"  list="field1" name="browser">&emsp;                                <datalist id="field1">
+                                    <option value="1">
+                                    <option value="2">
+                                    <option value="3">
+                                    <option value="4">
+                                    <option value="5">
+                                    <option value="6">
+                                    <option value="7">
+                                    <option value="8">
+                                    <option value="9">
+                                    <option value="10">
+                                    <option value="11">
+                                    <option value="12">
+                                    <option value="13">
+                                    <option value="14">
+                                    <option value="15">
+                                    <option value="16">
+                                    <option value="17">
+                                    <option value="18">
+                                    <option value="19">
+                                    <option value="20">
+                                    <option value="21">
+                                    <option value="22">
+                                    <option value="23">
+                                    <option value="24">
+                                    <option value="25">
+                                    <option value="26">
+                                    <option value="27">
+                                    <option value="28">
+                                    <option value="29">
+                                    <option value="30">
+                                    <option value="31">
+                                    <option value="32">
+                                    <option value="33">
+                                    <option value="34">
+                                    <option value="35">
+                                    <option value="36">
+                                    <option value="37">
+                                    <option value="38">
+                                    <option value="39">
+                                    <option value="40">
+                                    <option value="41">
+                                    <option value="42">
+                                    <option value="43">
+                                    <option value="44">
+                                    <option value="45">
+                                    <option value="46">
+                                    <option value="47">
+                                    <option value="48">
+                                    <option value="49">
+                                    <option value="50">
+                                    <option value="61">
+                                    <option value="62">
+                                    <option value="63">
+                                    <option value="64">
+                                    <option value="65">
+                                    <option value="66">
+                                    <option value="67">
+                                    <option value="68">
+                                    <option value="69">
+                                    <option value="70">
+                                    <option value="71">
+                                    <option value="72>"
+                                    <option value="73">
+                                    <option value="74">
+                                </datalist>
+
+                        </div>
+                        <div class="form-group">
+                          <label  for="cord2">Cordinate 2: </label>
+                          <input class="form-control m-2" id="t2"  list="field2" name="browser">&emsp;                                <datalist id="field2">
+                                    <option value="1">
+                                    <option value="2">
+                                    <option value="3">
+                                    <option value="4">
+                                    <option value="5">
+                                    <option value="6">
+                                    <option value="7">
+                                    <option value="8">
+                                    <option value="9">
+                                    <option value="10">
+                                    <option value="11">
+                                    <option value="12">
+                                    <option value="13">
+                                    <option value="14">
+                                    <option value="15">
+                                    <option value="16">
+                                    <option value="17">
+                                    <option value="18">
+                                    <option value="19">
+                                    <option value="20">
+                                    <option value="21">
+                                    <option value="22">
+                                    <option value="23">
+                                    <option value="24">
+                                    <option value="25">
+                                    <option value="26">
+                                    <option value="27">
+                                    <option value="28">
+                                    <option value="29">
+                                    <option value="30">
+                                    <option value="31">
+                                    <option value="32">
+                                    <option value="33">
+                                    <option value="34">
+                                    <option value="35">
+                                    <option value="36">
+                                    <option value="37">
+                                    <option value="38">
+                                    <option value="39">
+                                    <option value="40">
+                                    <option value="41">
+                                    <option value="42">
+                                    <option value="43">
+                                    <option value="44">
+                                    <option value="45">
+                                    <option value="46">
+                                    <option value="47">
+                                    <option value="48">
+                                    <option value="49">
+                                    <option value="50">
+                                    <option value="61">
+                                    <option value="62">
+                                    <option value="63">
+                                    <option value="64">
+                                    <option value="65">
+                                    <option value="66">
+                                    <option value="67">
+                                    <option value="68">
+                                    <option value="69">
+                                    <option value="70">
+                                    <option value="71">
+                                    <option value="72>"
+                                    <option value="73">
+                                    <option value="74">
+
+                                </datalist>
+
+                        </div>    <div class="clearfix" ></div>
+
+                            <div class="form-group">
+                          <label for="cord3">Extra Input: </label><br><br>
+                          <input  class="form-control m-2" id="t3"  list="field3" name="browser">
+                                <datalist id="field3">
+                                    <option value="Original">
+                                    <option value="Optimal">
+                                    <option value="Money">
+                                    <option value="People">
+                                </datalist>
+                            </div>
+ </form>
+                    <br>
+                        <button type="submit" class="button1 button2 m-2">Submit</button><br><br></div>
+
+<!--                    Code ends here for container-->
+<!--                </div>-->
+            </div>
+
+        </div>
+        <!-- Carousel controls -->
+        <a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#myCarousel" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </a>
+    </div>
+</div>
+
+<!--
+        
+            <div class="col-12">
+                <div class="mx-auto tm-gallery-container">
+                    <div class="grid tm-gallery">
+                      <a href="img/gallery-img-01.jpg">
+                        <figure class="effect-honey tm-gallery-item">
+                          <img src="img/gallery-tn-01.jpg" alt="Image" class="img-fluid">
+                          <figcaption>
+                            <h2><i>Dreamy <span>Vehicle</span> Now</i></h2>
+                          </figcaption>
+                        </figure>
+                      </a>
+                      <a href="img/gallery-img-02.jpg">
+                        <figure class="effect-honey tm-gallery-item">
+                          <img src="img/gallery-tn-02.jpg" alt="Image" class="img-fluid">
+                          <figcaption>
+                            <h2><i>Second <span>Vehicle</span> Now</i></h2>
+                          </figcaption>
+                        </figure>
+                      </a>
+                      <a href="img/gallery-img-03.jpg">
+                        <figure class="effect-honey tm-gallery-item">
+                          <img src="img/gallery-tn-03.jpg" alt="Image" class="img-fluid">
+                          <figcaption>
+                            <h2><i>Third <span>Vehicle</span> Now</i></h2>
+                          </figcaption>
+                        </figure>
+                      </a>
+                      <a href="img/gallery-img-04.jpg">
+                        <figure class="effect-honey tm-gallery-item">
+                          <img src="img/gallery-tn-04.jpg" alt="Image" class="img-fluid">
+                          <figcaption>
+                            <h2><i>Dreamy <span>Vehicle</span> Now</i></h2>
+                          </figcaption>
+                        </figure>
+                      </a>
+                      <a href="img/gallery-img-05.jpg">
+                        <figure class="effect-honey tm-gallery-item">
+                          <img src="img/gallery-tn-05.jpg" alt="Image" class="img-fluid">
+                          <figcaption>
+                            <h2><i>Fifth <span>Vehicle</span> Now</i></h2>
+                          </figcaption>
+                        </figure>
+                      </a>
+                      <a href="img/gallery-img-06.jpg">
+                        <figure class="effect-honey tm-gallery-item">
+                          <img src="img/gallery-tn-06.jpg" alt="Image" class="img-fluid">
+                          <figcaption>
+                            <h2><i>Sixth <span>Vehicle</span> Now</i></h2>
+                          </figcaption>
+                        </figure>
+                      </a>
+                      <a href="img/gallery-img-01.jpg">
+                        <figure class="effect-honey tm-gallery-item">
+                          <img src="img/gallery-tn-01.jpg" alt="Image" class="img-fluid">
+                          <figcaption>
+                            <h2><i>Dreamy <span>Vehicle</span> Now</i></h2>
+                          </figcaption>
+                        </figure>
+                      </a>
+                      <a href="img/gallery-img-02.jpg">
+                        <figure class="effect-honey tm-gallery-item">
+                          <img src="img/gallery-tn-02.jpg" alt="Image" class="img-fluid">
+                          <figcaption>
+                            <h2><i>Eighth <span>Honey</span> Now</i></h2>
+                          </figcaption>
+                        </figure>
+                      </a>
+                    </div>
+                </div>                
+            </div>        
+          </div>
+-->
+      </div>
+    </section>
+        
+
+<!--Our Work section ends here-->
+        
+        
+<!--        Our login section starts here-->
+            <br><br><section id="login">
+
+        <div class="login_container" style="background-color:#f1f1f1">
+    <h2 style="color:#000000"><center>LOGIN</center></h2>
+
+    <hr size="4.5" width="100%" align="left" color="#4CAF50">
+
+    <div class="login_imgcontainer" style="background-color:#f1f1f1">
+        <img src="{% static 'img/login_avatar.png' %}" alt="Avatar" class="avatar" width="100px">
+    </div>
+
+    <div>
+        <label for="uname"><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" name="uname" width = "50px"required>
+
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" required>
+        
+        <a href="#"><button type="submit" class="login_btn" >Login</button></a>
+        <label>
+            <input type="checkbox" checked="checked" name="remember"> Remember me
+        </label>
+    </div>
+
+    <div>
+        <button type="button" class="login_cancelbtn">Forgot Password</button>
+<!--        <span class="psw">Forgot <a href="#">password?</a></span>-->
+   </div>
+
+
+    <hr size="6" width="100%" align="left" color="#4CAF50">
+</div>
+        </section>
+<br>
+<br>
+<br>
+        
+<!--        Our login section ends here-->
+      
+        
+    <!-- Contact -->
+    <section id="contact" class="tm-section-pad-top tm-parallax-2">
+      <div class="container tm-container-contact">
+        <div class="row">
+            <div class="col-12">
+                <h2 class="mb-4 tm-section-title">Contact Us</h2>
+                <div class="mb-5 tm-underline">
+                  <div class="tm-underline-inner"></div>
+                </div>
+                <p class="mb-5">
+                  We can be contacted anytime, anywhere to provide you service. We Aim to become Amazon for Transportation service for common people. We always belives a day well spent is worth a week's content
+                </p>
+            </div>
+            
+            <div class="col-sm-12 col-md-6 d-flex align-items-center tm-contact-item">
+              <a href="tel:0100200340" class="tm-contact-item-link">
+                  <i class="fas fa-3x fa-phone mr-4"></i>
+                  <span class="mb-0">010-020-0340</span>
+              </a>              
+            </div>
+            <div class="col-sm-12 col-md-6 d-flex align-items-center tm-contact-item">
+              <a href="mailto:info@company.co" class="tm-contact-item-link">
+                  <i class="fas fa-3x fa-envelope mr-4"></i>
+                  <span class="mb-0">info@transporters.co</span>
+              </a>              
+            </div>
+            <div class="col-sm-12 col-md-6 d-flex align-items-center tm-contact-item">
+              <a href="https://www.google.com/maps" class="tm-contact-item-link">
+                  <i class="fas fa-3x fa-map-marker-alt mr-4"></i>
+                  <span class="mb-0">Location on Maps</span>
+              </a>              
+            </div>
+            <div class="col-sm-12 col-md-6 d-flex align-items-center tm-contact-item">
+              <form action="" method="get">
+                <input name="email" type="email" placeholder="Subscribe your email" class="tm-input" required />
+                <button type="submit" class="btn tm-btn-submit">Submit</button>
+              </form>
+            </div>
+        </div>
+      </div>
+      <footer class="text-center small tm-footer">
+          <p class="mb-0">
+            Copyright &copy; 2019 The Transporters 
+            
+           </p>
+        </footer>
+    </section>
+    <script src="{% static 'js/jquery-1.9.1.min.js' %}"></script>     
+    <script src="{% static 'slick/slick.min.js' %}"></script>
+    <script src="{% static 'magnific-popup/jquery.magnific-popup.min.js' %}"></script>
+    <script src="{% static 'js/jquery.singlePageNav.min.js' %}"></script>     
+    <script src="{% static 'js/bootstrap.min.js' %}"></script> 
+    <script src="{% static 'js/form1_script.js' %}"></script> 
+
+    <script>
+
+      function getOffSet(){
+        var _offset = 450;
+        var windowHeight = window.innerHeight;
+
+        if(windowHeight > 500) {
+          _offset = 400;
+        } 
+        if(windowHeight > 680) {
+          _offset = 300
+        }
+        if(windowHeight > 830) {
+          _offset = 210;
+        }
+
+        return _offset;
+      }
+
+      function setParallaxPosition($doc, multiplier, $object){
+        var offset = getOffSet();
+        var from_top = $doc.scrollTop(),
+          bg_css = 'center ' +(multiplier * from_top - offset) + 'px';
+        $object.css({"background-position" : bg_css });
+      }
+
+      // Parallax function
+      // Adapted based on https://codepen.io/roborich/pen/wpAsm        
+      var background_image_parallax = function($object, multiplier, forceSet){
+        multiplier = typeof multiplier !== 'undefined' ? multiplier : 0.5;
+        multiplier = 1 - multiplier;
+        var $doc = $(document);
+        // $object.css({"background-attatchment" : "fixed"});
+
+        if(forceSet) {
+          setParallaxPosition($doc, multiplier, $object);
+        } else {
+          $(window).scroll(function(){          
+            setParallaxPosition($doc, multiplier, $object);
+          });
+        }
+      };
+
+      var background_image_parallax_2 = function($object, multiplier){
+        multiplier = typeof multiplier !== 'undefined' ? multiplier : 0.5;
+        multiplier = 1 - multiplier;
+        var $doc = $(document);
+        $object.css({"background-attachment" : "fixed"});
+        $(window).scroll(function(){
+          var firstTop = $object.offset().top,
+              pos = $(window).scrollTop(),
+              yPos = Math.round((multiplier * (firstTop - pos)) - 186);              
+
+          var bg_css = 'center ' + yPos + 'px';
+
+          $object.css({"background-position" : bg_css });
+        });
+      };
+      
+      $(function(){
+        // Hero Section - Background Parallax
+        background_image_parallax($(".tm-parallax"), 0.30, false);
+        background_image_parallax_2($("#contact"), 0.80);   
+        
+        // Handle window resize
+        window.addEventListener('resize', function(){
+          background_image_parallax($(".tm-parallax"), 0.30, true);
+        }, true);
+
+        // Detect window scroll and update navbar
+        $(window).scroll(function(e){          
+          if($(document).scrollTop() > 120) {
+            $('.tm-navbar').addClass("scroll");
+          } else {
+            $('.tm-navbar').removeClass("scroll");
+          }
+        });
+        
+        // Close mobile menu after click 
+        $('#tmNav a').on('click', function(){
+          $('.navbar-collapse').removeClass('show'); 
+        })
+
+        // Scroll to corresponding section with animation
+        $('#tmNav').singlePageNav();        
+        
+        // Add smooth scrolling to all links
+        // https://www.w3schools.com/howto/howto_css_smooth_scroll.asp
+        $("a").on('click', function(event) {
+          if (this.hash !== "") {
+            event.preventDefault();
+            var hash = this.hash;
+
+            $('html, body').animate({
+              scrollTop: $(hash).offset().top
+            }, 400, function(){
+              window.location.hash = hash;
+            });
+          } // End if
+        });
+
+        // Pop up
+        $('.tm-gallery').magnificPopup({
+          delegate: 'a',
+          type: 'image',
+          gallery: { enabled: true }
+        });
+
+        // Gallery
+        $('.tm-gallery').slick({
+          dots: true,
+          infinite: false,
+          slidesToShow: 5,
+          slidesToScroll: 2,
+          responsive: [
+          {
+            breakpoint: 1199,
+            settings: {
+              slidesToShow: 4,
+              slidesToScroll: 2
+            }
+          },
+          {
+            breakpoint: 991,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 2
+            }
+          },
+          {
+            breakpoint: 767,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 1
+            }
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          }
+        ]
+        });
+      });
+    </script>
+  </body>
+</html>

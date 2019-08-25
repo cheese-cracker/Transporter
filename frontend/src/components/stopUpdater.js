@@ -67,6 +67,7 @@ class StopUpdater extends Component {
 
       render() {
         return (
+          <div className="module-box">
           <form onSubmit={this.handleSubmit}>
           <div className="form-group">
             <label>
@@ -97,6 +98,7 @@ class StopUpdater extends Component {
             <input className="btn btn-primary" type="submit" value="Submit" />
             </div>
           </form>
+      </div>
         );
       }  
 };

@@ -9,6 +9,7 @@ import Clock from './components/Clock';
 import BarGraph from './components/barGraph';
 import LeafMap from './components/leafletMap';
 import RouteGraph from './components/routeGraph';
+import Cytos from './components/cytoGraph';
 // import Postit from './components/Postit';
 
 
@@ -20,6 +21,7 @@ const BusListings = () => (
       <Route path="/station_population" exact component={BarGraph} />
       <Route path="/map" exact component={LeafMap} />
       <Route path="/routegraph" exact component={RouteGraph} />
+      <Route path="/cytos" exact component={Cytos} />
     </div>
 );
 
@@ -37,6 +39,7 @@ class App extends Component {
           <Nav.Link href="/station_population/">Bus Stop Population Graph</Nav.Link>
           <Nav.Link href="/map">Bus Stops Map</Nav.Link>
           <Nav.Link href="/routegraph">Route Network</Nav.Link>
+          <Nav.Link href="/cytos">Cytos Map</Nav.Link>
         </Nav>
         <Clock />
     </Navbar>
@@ -48,7 +51,6 @@ class App extends Component {
 
     </div>
     );
-  }
-}
+  } }
 
 export default App;
