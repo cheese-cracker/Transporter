@@ -1,0 +1,4 @@
+[submodule "bundle/fugitive"]
+	path = utils/NEC_hackathon
+	url = git://github.com/manan-competitions/NEC-hackathon/
+    ignore = dirty

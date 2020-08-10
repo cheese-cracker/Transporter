@@ -160,7 +160,7 @@ Also alongwith these, we created admin dashboard for managing routes. Other than
                       <form class="form-inline" action="/postMode" method='POST'>
                           {% csrf_token %}
                         <div class="form-group">
-                          <label  for="cord1">Cordinate 1: </label>
+                          <label  for="cord1">Bus Stop 1: </label>
                           <input class="form-control m-2" id="t1"  list="field1" name="browser">&emsp;                                <datalist id="field1">
                                                                         <option value="1">
                                     <option value="2">
@@ -230,7 +230,7 @@ Also alongwith these, we created admin dashboard for managing routes. Other than
 
                         </div>
                         <div class="form-group">
-                          <label  for="cord2">Cordinate 2: </label>
+                          <label  for="cord2">Bus Stop 2: </label>
                           <input class="form-control m-2" id="t2"  list="field2" name="browser">&emsp;                                <datalist id="field2">
                                     <option value="1">
                                     <option value="2">
@@ -302,7 +302,7 @@ Also alongwith these, we created admin dashboard for managing routes. Other than
                         </div>    <div class="clearfix" ></div>
 
                             <div class="form-group">
-                          <label for="cord3">Extra Input: </label><br><br>
+                          <label for="cord3">Constraint Mode: </label><br><br>
                           <input  class="form-control m-2" id="t3"  list="field3" name="browser">
                                 <datalist id="field3">
                                     <option value="Original">
@@ -488,11 +488,12 @@ Also alongwith these, we created admin dashboard for managing routes. Other than
                     <div class="f_container">
                       <h2>People</h2>
                       <p>The viewport showing the graphs of People solution as made by our model</p>
-                      <form class="form-inline" action="/action_page.php">
+                      <form class="form-inline" action="/postMode">
                         <div class="form-group">
-                          <label  for="cord1">Cordinate 1: </label>
-                          <input class="form-control m-2" id="t1"  list="field1" name="browser">&emsp;                                <datalist id="field1">
-                                                                        <option value="1">
+                          <label  for="cord1">Bus Stop 1: </label>
+                          <input class="form-control m-2" id="t1"  list="field1" name="browser">&emsp;                                
+                          <datalist id="field1">
+                                    <option value="1">
                                     <option value="2">
                                     <option value="3">
                                     <option value="4">
@@ -560,8 +561,8 @@ Also alongwith these, we created admin dashboard for managing routes. Other than
 
                         </div>
                         <div class="form-group">
-                          <label  for="cord2">Cordinate 2: </label>
-                          <input class="form-control m-2" id="t2"  list="field2" name="browser">&emsp;                                <datalist id="field2">
+                          <input class="form-control m-2" id="t2"  list="field2" name="browser">
+                          <datalist id="field2">
                                     <option value="1">
                                     <option value="2">
                                     <option value="3">
@@ -626,7 +627,6 @@ Also alongwith these, we created admin dashboard for managing routes. Other than
                                     <option value="72>"
                                     <option value="73">
                                     <option value="74">
-
                                 </datalist>
 
                         </div>    <div class="clearfix" ></div>
@@ -641,9 +641,10 @@ Also alongwith these, we created admin dashboard for managing routes. Other than
                                     <option value="People">
                                 </datalist>
                             </div>
- </form>
+
                     <br>
                         <button type="submit" class="button1 button2 m-2">Submit</button><br><br></div>
+ </form>
 
 <!--                    Code ends here for container-->
 <!--                </div>-->
@@ -654,10 +655,10 @@ Also alongwith these, we created admin dashboard for managing routes. Other than
                     <div class="f_container">
                       <h2>Money</h2>
                       <p>The viewport showing the graphs of Money solution as made by our model</p>
-                      <form class="form-inline" action="/action_page.php">
+                      <form class="form-inline" action="/postMode">
                         <div class="form-group">
-                          <label  for="cord1">Cordinate 1: </label>
-                          <input class="form-control m-2" id="t1"  list="field1" name="browser">&emsp;                                <datalist id="field1">
+                          <label  for="cord1">Bus Stop 1: </label>
+                          <input class="form-control m-2" id="t1"  list="field1" name="bs1">&emsp;                                <datalist id="field1">
                                     <option value="1">
                                     <option value="2">
                                     <option value="3">
@@ -726,8 +727,8 @@ Also alongwith these, we created admin dashboard for managing routes. Other than
 
                         </div>
                         <div class="form-group">
-                          <label  for="cord2">Cordinate 2: </label>
-                          <input class="form-control m-2" id="t2"  list="field2" name="browser">&emsp;                                <datalist id="field2">
+                          <label  for="cord2">Bus Stop 2: </label>
+                          <input class="form-control m-2" id="t2"  list="field2" name="bs2">&emsp;                                <datalist id="field2">
                                     <option value="1">
                                     <option value="2">
                                     <option value="3">
@@ -810,7 +811,6 @@ Also alongwith these, we created admin dashboard for managing routes. Other than
  </form>
                     <br>
                         <button type="submit" class="button1 button2 m-2">Submit</button><br><br></div>
-
 <!--                    Code ends here for container-->
 <!--                </div>-->
             </div>

@@ -9,7 +9,7 @@ from django.views.decorators.csrf import csrf_exempt
 from .models import BusStop
 from .serializers import BusStopSerializer
 from utils.pathfinder import get_route
-from webtools import get_G, get_Gstats
+from webtools import get_G, get_Gstats, get_all_G, clear_imgs
 
 import json
 import csv
@@ -144,18 +144,19 @@ def route_give(req):
 
 
 def LoadView(req):
-    thid = get_G('original_route.png')
-    print(thid)
+    # thid = get_G('original_route.png')
+    # print(thid)
     return render(req, 'backend/index.html', {
                   'picture': 'original_route.png',
     })
 
 
 def FullView(req):
-    thid = get_all_G(['original_route.png', 'people_route', 'optimal_route'])
+    fnall = ['original_route.png', 'people_route', 'optimal_route','money_route']
+    thid = get_all_G(fnall)
     print(thid)
+    # clear_imgs(fnall)
     return render(req, 'backend/index.html', {
-                  'picture': 'original_route.png',
     })
 
 
@@ -168,20 +169,24 @@ def postMode(req):
         res = redirect('/getStats')
         # res =  HttpResponse('<h2> Posted</h2>')
         mod = data['browser'].lower()
+        # bs1 = data['bs1']
+        # bs2 = data['bs2']
         print(mod)
         # if 'mode' not in req.COOKIES:
         res.set_cookie('mode', mod)
+        # res.set_cookie('bs1', bs1)
+        # res.set_cookie('bs2', bs2)
         # res =  HttpResponse('<h2> Posted</h2>')
         return res
 
 
 def getStats(req):
     try:
-        mode = req.COOKIES['mode']
+        mode = req.COOKIES['mode'].lower()
+        print(mode)
     except Exception:
         mode = 'original'
     cp, cn, affected, benefited, inconvinience = get_Gstats(mode)
-    print(inconvinience)
     return render(req, 'backend/tabulate.html', {
             'cp': cp,
             'cn': cn,

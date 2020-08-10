@@ -25,6 +25,7 @@ urlpatterns = [
     path('routes_all', vw.routes_detail),
     path('route_give', vw.route_give),
     path('', vw.LoadView),
+    path('index', vw.FullView),
     path('postMode', vw.postMode),
     path('getStats', vw.getStats),
 ]

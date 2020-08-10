@@ -6,8 +6,10 @@ import csv
 import matplotlib.pyplot as plt
 from matplotlib.pyplot import cm
 
+import time
 from helpers.utils import add_weights, get_diff, fitness, simulate_people, CreateGraph
 from helpers.route import Route, Routes
+from routePath import optimal_route
 
 img_dir = 'backend/static/img/'
 
@@ -18,14 +20,27 @@ def get_G(fna):
     plot_graph(G, fname=fna)
     return G
 
-# def get_all_G(fnall):
-#     pre = 'weekday'
-#     G = CreateGraph(75, fname=f'data/{pre}_final_full_graph.csv', pre=pre, node_prob=True)
-#     for fna in fnall:
-#         modd = fna.split('_')[0]
-#         the_route = get_route(pre, modd)
-#         plot_route(G, the_route, fname=fna)
-#     return G
+
+def get_all_G(fnall):
+    pre = 'weekday'
+    G = CreateGraph(75, fname=f'data/{pre}_final_full_graph.csv', pre=pre, node_prob=True)
+    for fna in fnall:
+       modd = fna.split('_')[0]
+       the_route = get_route(pre, modd)
+       print(fna, modd)
+       plot_route(G, the_route, fname=fna)
+       time.sleep(3)
+    return G
+
+
+def get_it_now(fna):
+    pre = 'weekday'
+    G = CreateGraph(75, fname=f'data/{pre}_final_full_graph.csv', pre=pre, node_prob=True)
+    modd = fna.split('_')[0]
+    the_route = get_route(pre, modd)
+    print(fna, modd)
+    plot_route(G, the_route, fname=fna)
+    return G
 
 
 def get_Gstats(mode):
@@ -33,23 +48,14 @@ def get_Gstats(mode):
     G = CreateGraph(75, fname=f'data/{pre}_final_full_graph.csv', pre=pre, node_prob=True)
     # plot_graph(G, fname='main')
     # return G
-    r1 = get_route(pre, mode)
+    r1 = get_route(pre, 'original')
     r2 = get_route(pre, mode)
     return get_stats(G, r1, r2)
 
 
-# def get_G_with(mode, st, end):
-#     pre = 'sunday'
-#     G = CreateGraph(75, fname=f'data/{pre}_final_full_graph.csv', pre=pre, node_prob=True)
-#     the_route = get_route(pre, )
-#     plot_graph(G, , fname='main')
-#     return G
-
-
-# Do NOT use
-def clear_imgs():
-    os.rmdir(img_dir)
-    os.makedirs(img_dir)
+def clear_imgs(fnall):
+    for file_ in fnall:
+        os.remove(img_dir+file_)
 
 
 def get_route(pre, mode):
@@ -89,6 +95,8 @@ def plot_graph(G, fname=None, edge_weight="length", vertex_weight="both", show=F
     )
 
     if fname:
+        if os.path.isfile(img_dir+fname):
+            os.remove(img_dir+fname)
         plt.savefig(img_dir + fname)
 
     if show:
@@ -96,14 +104,14 @@ def plot_graph(G, fname=None, edge_weight="length", vertex_weight="both", show=F
 
 
 def plot_route(G, list_route, fname=None, show=False):
-    if not isinstance(list_route, list):
-        list_route = [list_route]
+    list_route = list_route.routes
 
     color = cm.get_cmap("rainbow")(np.linspace(0, 1, len(list_route)))
     G_ = nx.DiGraph()
     for route in list_route:
         for i in range(len(route.v_disabled) - 1):
             v_curr = route.v_disabled[i]
+            v_next = route.v_disabled[i+1]
 
             G_.add_edge(
                 v_curr,
@@ -123,7 +131,12 @@ def plot_route(G, list_route, fname=None, show=False):
     plot_graph(G_, edge_weight="route", fname=fname, show=show)
 
 
-def get_stats(G, route1, route2, num_of_people=5000):
+def plot_route_sd(G, list_route, src, dest, fname=None, show=False):
+    opt_route = optimal_route(list_route, src, dest)
+    plot_route(G, [r[0] for r in opt_route], fname=fname, show=show)
+
+
+def get_stats(G, route1, route2, num_of_people=50000):
     ppl = simulate_people(G, num_of_people)
     cp, cn, G_diff = get_diff(route1, route2, G, ppl, vertex_weight="both")
     diffs = nx.get_edge_attributes(G_diff, "weight")

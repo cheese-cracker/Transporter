@@ -198,9 +198,9 @@ def fitness(
         for i in range(len(route.v_disabled) - 1):
             current_capacity += deboard_dict.get(i, 0)
             deboard_dict[i] = 0
-            for k in set(sim_dg[route.v_disabled[i]]).intersection(
-                set(route.v_disabled[i + 1 :])
-            ):
+            my_list = list(set(sim_dg[route.v_disabled[i]]).intersection( set(route.v_disabled[i + 1 :])))
+            my_list.sort()
+            for k in my_list:
                 p = route.v.index(k)
                 people_boarding = min(
                     sim_dg[route.v_disabled[i]][k]["weight"], current_capacity
